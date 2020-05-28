@@ -1,0 +1,26 @@
+@charset "UTF-8"
+*
+  margin: 0
+  padding: 0
+a
+  color: initial
+  text-decoration: initial
+ul
+  list-style: none
+  $black: hsla(210, 10%, 10%, 1.0)
+  $lightblack: hsla(210, 10%, 25%, 1.0)
+  $lightgray: hsla(110, 0%, 70%, 1.0)
+  $lightgreen: hsla(110, 80%, 55%, 0.6)
+  $green: hsla(110, 80%, 55%, 0.8)
+body
+  width: 100%
+  text-align: center
+  $wrapWidth: 1000px
+  #wrap
+    position: relative
+    width: $wrapWidth
+    margin: 0 auto
+    text-align: left
+    @import "header"
+    @import "main"
+    @import "footer"

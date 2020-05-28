@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dark Design Ⅰ</title>
+    <link rel="stylesheet" href="darkdesign.css" />
+    <link rel="stylesheet" href="darkdesign_responsive.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+  </head>
+  <body>
+    <!-- ロード画面Jquery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+      $(function() {
+        var h = $(window).height();
+        $('#wrap').css('display','none');
+        $('#loader-bg ,#loader').height(h).css('display','block');
+      });
+      $(window).load(function () {
+        $('#loader-bg').delay(900).fadeOut(800);
+        $('#loader').delay(600).fadeOut(300);
+        $('#wrap').css('display', 'block');
+      });
+      $(function(){
+        setTimeout('stopload()',10000);
+      });
+      function stopload(){
+        $('#wrap').css('display','block');
+        $('#loader-bg').delay(900).fadeOut(800);
+        $('#loader').delay(600).fadeOut(300);
+      }
+    </script>
+    <!-- スムーススクロールJavaScript -->
+    <script>
+      $(function(){
+        $('a[href^="#"]').click(function() {
+          var speed = 2000;
+          var href= $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top;
+          $('body,html').animate({scrollTop:position}, speed, 'swing');
+          return false;
+        });
+      });
+    </script>
+    <div id="loader-bg">
+      <div id="loader">
+        <p>Now Loading...</p>
+      </div>
+    </div>
+    <div id="wrap">
+      <header>
+        <h1><a href="">Dark DesignⅠ</a></h1>
+      </header>
+      <label for="menuOn">
+        <input id="menuOn" type="checkbox">
+        <menu>
+          <ul>
+            <li><a href="#link1">闇に引き込まれるような空間</a></li>
+            <li><a href="#link2">暗い空間</a></li>
+            <li><a href="#link3">万物を塗りつぶす暗黒</a></li>
+            <li><a href="#link4">実はコンクリートな背景</a></li>
+            <li><a href="#link5">こんばんは</a></li>
+          </ul>
+        </menu>
+        <div class="overlay"></div>
+      </label>
+      <section>
+        <div id="first_container">
+          <h1><a id="link1">闇に引き込まれるような空間</a></h1>
+          <p>
+            誰もが寝静まった深夜･･･<span>
+            部屋の隅、家具の隙間、廊下の曲がり角、階段の奥･･･</span>
+            何かが潜んでいる･･･
+          </p>
+        </div>
+        <div id="second_container">
+          <h1><a id="link2">暗い空間</a></h1>
+          <p>
+            暗い空間に独り取り残され･･･<span>
+            この世界に自分一人しかいないんじゃないか･･･</span>
+          </p>
+        </div>
+        <div id="third_container">
+          <h1><a id="link3">万物を塗りつぶす暗黒</a></h1>
+          <p>
+            嫌なことは黒で塗りつぶしてやりたい･･･<span>
+            この世界の色が黒と白だけだったら･･･</span>
+          </p>
+        </div>
+        <div id="fourth_container">
+          <h1><a id="link4">実はコンクリートな背景</a></h1>
+          <p>
+            何かダークな雰囲気のテクスチャないかな･･･<span>
+            おっ･･･黒くてなんか良さそう･･･</span>
+            グラデーションで暗い雰囲気にしたら･･･
+          </p>
+        </div>
+        <div id="fifth_container">
+          <h1><a id="link5">こんばんは</a></h1>
+          <p>
+            ページが暗い雰囲気だからこんな挨拶してもいい気がします･･･<span>
+            ヒロシです･･･</span>
+            ヒロシです･･･ヒロシです･･･ヒロ･･･です･･････ヒ･･････す･･･
+          </p>
+        </div>
+        <small id="footer_copyRight">
+          ©2020 darkdesign01 all right reserved
+        </small>
+      </section>
+    </div>
+  </body>
+</html>

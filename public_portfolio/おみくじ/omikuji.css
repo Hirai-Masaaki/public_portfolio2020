@@ -1,0 +1,33 @@
+body {
+  background: #efefef;
+}
+h1 ,em {
+  display: block;
+  text-align: center;
+}
+em {
+  color: crimson;
+}
+#btn {
+  width: 200px;
+  height: 200px;
+  background: gray;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+  line-height: 200px;
+  color: white;
+  font-weight: 600;
+  font-size: 42px;
+  cursor: pointer;
+  box-shadow: 0 10px 0 rgb(83, 83, 83);
+  user-select: none; /* テキストとか範囲選択したときの色つくやつをなしにする(ボタン系は全部noneにしたほうがいいかも)*/
+}
+#btn:hover {
+  opacity: 0.8;
+}
+#btn:active {
+  box-shadow: 0 5px 0 rgba(94, 94, 94);
+  margin-top: 15px;
+}

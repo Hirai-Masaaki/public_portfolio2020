@@ -1,0 +1,500 @@
+@charset "UTF-8";
+* {
+	box-sizing: border-box;
+}
+/* ページ全体背景・基本テキストカラー */
+body {
+  padding: 0;
+	margin: auto;
+	background: linear-gradient(110deg, rgba(0, 225, 255, 0.116), rgba(0, 225, 255, 0.116)), url(images/floor2.jpg) fixed;
+	background-size: cover;
+	color: black;
+}
+/* フォントを定義 */
+@font-face {
+  font-family: "fuga";
+  src: url("fonts/TA_fuga_fude_03_m.otf");
+  font-weight: bold;
+}
+/* ul設定 */
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+/* ページ左の動かない縦メニューバー */
+.sideMenuBar {
+	background-color: rgba(255, 255, 255, 0.705);
+	position: fixed;
+	height: 950px;
+	width: 250px;
+	text-align: center;
+	z-index: 999;
+}
+.sideMenuBar_logo {
+	font-size: 45px;
+	font-weight: 700;
+	line-height: 1;
+}
+.sideMenuBar_logo a {
+	display: block;
+	width: 100%;
+	padding: 30px 0;
+	color: rgb(0, 0, 0);
+	background: radial-gradient(closest-side,rgba(0, 0, 0, 0.144),rgba(255, 255, 255, 0));
+	-webkit-text-stroke: 2px white;
+	text-decoration-line: none;
+}
+.sideMenuBar_logo a:hover {
+	color: rgb(255, 174, 0);
+	background: radial-gradient(closest-side,rgba(255, 174, 0, 0.144),rgba(255, 255, 255, 0));
+	-webkit-text-stroke: 2px white;
+	transition: all 1.2s ease ;
+}
+.sideMenuBar_logo span {
+	line-height: 1.3;
+}
+.sideMenuBar_menu {
+	height: 100%;
+	font-weight: 600;
+	font-size: 20px;
+}
+.sideMenuBar_menu li:hover {
+	background: linear-gradient(rgba(255, 255, 255, 0.507), rgba(0, 0, 0, 0.507));
+	border-radius: 5px;
+}
+.sideMenuBar_menu li a {
+	display: block;
+	width: 100%;
+	padding: 10px 0;
+	margin: 0;
+	color: rgb(80, 80, 80);
+	text-decoration-line: none;
+}
+.sideMenuBar_menu li a:hover {
+	color: white;
+	font-weight: 900;
+}
+.sideMenuBar_arks {
+	position: relative;
+	margin-top:30px ;
+}
+.imacoco {
+	background: linear-gradient(rgba(255, 255, 255, 0.801), rgba(0, 0, 0, 0.801));
+	border-radius: 5px;
+	color: white;
+}
+.imacoco:hover {
+	background: linear-gradient(rgba(255, 255, 255, 0.507), rgba(0, 0, 0, 0.507));
+	border-radius: 5px;
+}
+.imacoco span {
+	color: white;
+}
+/* ページの本題 */
+.container {
+	height: 950px;
+	width: 1189.58px;
+  margin-left: 250px;
+  display: grid;
+  grid-template-rows: 72px 50px auto 30px;
+  grid-template-columns: 938.88px 250.7px;
+}
+
+/* 全ページ共通お知らせ */
+.container_news {
+	grid-row: 2/4;
+	grid-column: 2/3;
+	width: 230px;
+	height: 315px;
+	margin: 0;
+	border-radius: 10px;
+	border: medium solid  rgba(192, 192, 192, 0.76);
+	background-color: rgba(255, 255, 255, 0.685);
+}
+.container_news h3 {
+	margin: 8px 69.82px;
+	font-size: 20px;
+	font-weight: 500;
+}
+.container_news li {
+	font-size: 12px;
+	letter-spacing: -1px;
+	line-height: 20px;
+}
+
+/* サブページごとのstylesheet */
+.container_title {
+  grid-row: 1/3;
+  grid-column: 1/2;
+  width: 30%;
+  margin: 35px 0 25px 80px;
+  font-size: 50px;
+  -webkit-text-stroke: 2px white;
+}
+#container_titleI {
+  background: linear-gradient(transparent 50%, rgba(255, 187, 0, 0.76) 50%);
+}
+#container_titleE {
+  background: linear-gradient(transparent 50%, rgba(253, 255, 109, 0.76) 50%);
+}
+#container_titleA {
+  background: linear-gradient(transparent 50%, rgba(150, 97, 0, 0.76) 50%);
+}
+#container_titleS {
+  background: linear-gradient(transparent 50%, rgba(0, 195, 255, 0.76) 50%);
+}
+#container_titleB {
+  background: linear-gradient(transparent 50%, rgba(0, 148, 57, 0.76) 50%);
+}
+#container_titleL {
+  background: linear-gradient(transparent 50%, rgba(175, 175, 175, 0.76) 50%);
+}
+.tabs {
+  grid-row: 3/4;
+  grid-column: 1/2;
+  background-color: rgba(255, 255, 255, 0.801);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 780px;
+  margin: 0 auto;
+}
+.tab_itemI {
+  width: calc(100%/6);
+  height: 70px;
+  border-bottom: 3px solid #ffae00;
+  background-color: #fff0c5;
+  font-size: 15px;
+  text-align: center;
+  color: #9e9e9e;
+  display: block;
+  float: left;
+  font-weight: bold;
+  padding-top: 11px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.tab_itemE {
+  width: calc(100%/5);
+  height: 70px;
+  border-bottom: 3px solid rgba(253, 255, 109);
+  background-color: rgb(253, 255, 196);
+  font-size: 15px;
+  text-align: center;
+  color: #9e9e9e;
+  display: block;
+  float: left;
+  font-weight: bold;
+  padding-top: 11px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.tab_itemA {
+  width: calc(100%/4);
+  height: 70px;
+  border-bottom: 3px solid rgba(150, 97, 0);
+  background-color: rgb(238, 200, 130);
+  font-size: 15px;
+  text-align: center;
+  color: #9e9e9e;
+  display: block;
+  float: left;
+  font-weight: bold;
+  padding-top: 11px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.tab_itemS {
+  width: calc(100%/2);
+  height: 70px;
+  border-bottom: 3px solid rgb(0, 195, 255);
+  background-color: rgb(197, 241, 255);
+  font-size: 18px;
+  text-align: center;
+  color: #9e9e9e;
+  display: block;
+  float: left;
+  font-weight: bold;
+  padding-top: 23px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.tab_itemB {
+  width: calc(100%/5);
+  height: 70px;
+  border-bottom: 3px solid rgba(0, 148, 57);
+  background-color: rgb(155, 228, 179);
+  font-size: 15px;
+  text-align: center;
+  color: #9e9e9e;
+  display: block;
+  float: left;
+  font-weight: bold;
+  padding-top: 11px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.tab_itemI span {
+  color: rgb(255, 172, 172);
+  font-weight: 500;
+}
+.tab_itemI:hover,
+.tab_itemE:hover,
+.tab_itemA:hover,
+.tab_itemS:hover,
+.tab_itemB:hover {
+  opacity: 0.75;
+}
+input[name="tab_item"] {
+  display: none;
+}
+.tab_content {
+  display: none;
+  padding: 30px;
+  clear: both;
+  overflow: hidden;
+  font-size: 22px;
+}
+#katzeOhr:checked ~ #katzeOhr_content,
+#member:checked ~ #member_content,
+#mascot:checked ~ #mascot_content,
+#loom:checked ~ #loom_content,
+#rule:checked ~ #rule_content,
+#recruiting:checked ~ #recruiting_content{
+  display: block;
+}
+#introParty:checked ~ #introParty_content,
+#equipParty:checked ~ #equipParty_content,
+#battleParty:checked ~ #battleParty_content,
+#miniParty:checked ~ #miniParty_content,
+#workParty:checked ~ #workParty_content{
+  display: block;
+}
+#SS:checked ~ #SS_content,
+#movie:checked ~ #movie_content,
+#wpRecord:checked ~ #wpRecord_content,
+#nya:checked ~ #nya_content{
+  display: block;
+}
+#ex:checked ~ #ex_content,
+#level:checked ~ #level_content{
+  display: block;
+}
+#memberB:checked ~ #memberB_content,
+#introB:checked ~ #introB_content,
+#workB:checked ~ #workB_content,
+#goodB:checked ~ #goodB_content,
+#enterB:checked ~ #enterB_content{
+  display: block;
+}
+.tabs input:checked + .tab_itemI{
+  background-color: #ffae00;
+  color: rgb(255, 255, 255);
+}
+.tabs input:checked + .tab_itemE{
+  background-color: rgba(253, 255, 109);
+  color: rgb(63, 63, 63);
+}
+.tabs input:checked + .tab_itemA{
+  background-color: rgb(150, 97, 0);
+  color: rgb(255, 255, 255);
+}
+.tabs input:checked + .tab_itemS{
+  background-color: rgb(0, 195, 255);
+  color: rgb(255, 255, 255);
+}
+.tabs input:checked + .tab_itemB {
+  background-color: rgb(0, 148, 57);
+  color: rgb(255, 255, 255);
+}
+.tabs input:checked + .tab_itemI span {
+  background-color: #ffae00;
+  color: rgb(255, 0, 0);
+  font-weight: 500;
+}
+/* I */
+#katzeOhr_content p {
+  margin: 0;
+}
+#katzeOhr_content h2 {
+  font-size: 50px;
+  font-weight: 700;
+  width: 60%;
+  height: 60px;
+  margin: 0;
+  background: linear-gradient(transparent 70%, rgba(255, 255, 0, 0.603) 70%);
+}
+#katzeOhr_content h3 {
+  display:inline-block;
+  text-align: center;
+  margin: 0 82.89px;
+}
+#katzeOhr_content a {
+  color: cornflowerblue;
+}
+#katzeOhr_content a:hover {
+  color: rgb(71, 119, 0);
+}
+#katzeOhr_content ul {
+  height: 215px;
+  padding-top: 7px;
+}
+.line_o {
+  text-decoration: underline solid orange;
+}
+.line_r {
+  text-decoration: underline solid red;
+}
+.line_g {
+  text-decoration: underline solid yellowgreen;
+}
+.line_p {
+  text-decoration: underline solid pink;
+}
+.color_red {
+  color: rgb(255, 67, 67);
+}
+#loom_content img {
+  width: 300px;
+  height: 200px;
+}
+#loom_content th,
+#loom_content td{
+  border: solid 1px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 15px;
+  padding: 0 5px;
+}
+#loom_content table {
+  border-collapse: collapse;
+}
+/* E */
+/* A */
+/* S */
+#ex_content h2,#ex_content h3,#ex_content h4,#ex_content h5,#ex_content p,#ex_content li {
+  margin: 0;
+}
+#ex_content h2{
+  display: inline-block;
+  text-align: center;
+  margin: 30px 64.89px;
+  color: rgb(0, 195, 255);
+  background: linear-gradient(-180.6deg, transparent 90%, rgb(0, 195, 255) 90%);
+  font-size: 50px;
+  font-weight: 700;
+}
+#ex_content h3{
+  font-size: 30px;
+  text-decoration: underline solid black;
+}
+#ex_content h4{
+
+}
+#ex_content h5{
+
+}
+#ex_content ul {
+  font-size: 16px;
+}
+.ex_content_content {
+  margin-bottom: 44px;
+}
+.ex_content_content_content {
+  margin-bottom: 22px;
+}
+#ex_content table {
+  table-layout: fixed;
+}
+#ex_content th,
+#ex_content td{
+  text-align: center;
+  font-weight: normal;
+  font-size: 18px;
+  padding: 20px 75px;
+}
+#ex_content th a,
+#ex_content td a{
+  color: cornflowerblue;
+}
+#ex_content th a:hover,
+#ex_content td a:hover{
+  color: green;
+}
+/* B */
+/* L */
+.container_Links {
+  grid-row: 3/4;
+  grid-column: 1/2;
+  font-size: 22px;
+  background-color: rgba(255, 255, 255, 0.801);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 780px;
+  margin: 0 auto;
+  border: medium solid  rgba(192, 192, 192, 0.76);
+}
+.container_Links li {
+  margin-top: 32px;
+  line-height: 28px;
+}
+.container_Links a {
+  overflow: scroll;
+  margin-left: 22px;
+  font-size: 17px;
+  color: cornflowerblue;
+}
+.container_Links a:hover {
+  color: green;
+}
+/* 全ページ共通 */
+.footer_copyRight {
+	grid-row: 4/5;
+	grid-column: 1/2;
+	text-align: center;
+}
+#page_top{
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+	opacity: 0.9;
+	z-index: 100;
+	right: 30px;
+}
+#page_top a{
+  position: relative;
+  display: block;
+  width: 90px;
+	height: 90px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f0a6';
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -60px;
+  bottom: 0;
+  right: 12px;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+#page_top a::after{
+  content: 'PAGE TOP';
+	font-size: 13px;
+	font-weight: 900;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}

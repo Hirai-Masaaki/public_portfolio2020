@@ -1,0 +1,26 @@
+* { margin: 0; padding: 0; }
+
+a { color: initial; text-decoration: initial; }
+
+ul { list-style: none; }
+
+body { width: 100%; text-align: center; }
+
+body #wrap { position: relative; width: 1000px; margin: 0 auto; text-align: left; }
+
+body #wrap .header { position: fixed; top: 0; width: 1000px; height: 50px; z-index: 100; background: #b1b1b19d; }
+
+body #wrap .header h1 { display: inline-block; -webkit-box-sizing: border-box; box-sizing: border-box; width: 180px; padding: 0 20px; float: left; }
+
+body #wrap .header .menu { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-flow: row nowrap; -ms-flex-flow: row nowrap; flex-flow: row nowrap; -webkit-box-pack: space-evenly; -webkit-justify-content: space-evenly; -ms-flex-pack: space-evenly; justify-content: space-evenly; width: 820px; height: 50px; float: left; background: #ffd3d3c0; font-size: 22px; }
+
+body #wrap .header .menu li { height: 100%; line-height: 50px; }
+
+body #wrap .header .menu li a:hover { -webkit-text-decoration: underline solid black; text-decoration: underline solid black; }
+
+body #wrap .main { margin-top: 50px; width: 1000px; height: 800px; background: gray; }
+
+body #wrap .footer { width: 1000px; height: 100px; background: lightgray; text-align: center; }
+
+body #wrap .footer small { color: gray; }
+/*# sourceMappingURL=index.css.map */

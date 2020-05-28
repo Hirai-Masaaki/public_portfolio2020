@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kadai_5</title>
+    <link rel="stylesheet" href="common/css/style.css">
+  </head>
+  <body>
+    <div id="wrap">
+      <header class="header"><a href="">JavaScript課題</a></header>
+      <h1><a href="">JavaScript課題</a></h1>
+      <h3>ようこそ！</h3>
+      <div class="container">
+        <h2>ボタン</h2>
+        <div class="button">
+          <div class="btn_A" onclick="A()">A</div>
+          <div class="btn_B" onclick="B()">B</div>
+          <div class="btn_C" onclick="C()">C</div>
+          <div class="btn_D" onclick="D()">D</div>
+          <div class="btn_E" onclick="E()">E</div>
+          <div class="btn_F" onclick="F()">F</div>
+          <div class="btn_G" onclick="G()">G</div>
+        </div>
+      </div>
+      <div class="container">
+        <h2>ボックス</h2>
+        <div class="box">
+          <div>A</div>
+          <div>B</div>
+          <div>C</div>
+          <div>D</div>
+          <div>E</div>
+          <div>F</div>
+          <div>G</div>
+        </div>
+      </div>
+      <div class="container">
+        <h2>テキストエリア</h2>
+        <div class="input">
+          <input type="text" id="A" placeholder="A">
+          <input type="text" id="B" placeholder="B">
+          <input type="text" id="C" placeholder="C">
+          <input type="text" id="D" placeholder="D">
+          <input type="text" id="E" placeholder="E">
+          <input type="text" id="F" placeholder="F">
+          <input type="text" id="G" placeholder="G">
+        </div>
+      </div>
+      <div class="grid">
+        <div class="container">
+          <h2>ダイアルパッド</h2>
+          <div class="dial">
+            <div class="br">
+              <div id="form" class="form"></div>
+            </div>
+            <div class="br">
+              <div class="dial_btn" onclick="dial(this)">1</div>
+              <div class="dial_btn" onclick="dial(this)">2</div>
+              <div class="dial_btn" onclick="dial(this)">3</div>
+            </div>
+            <div class="br">
+              <div class="dial_btn" onclick="dial(this)">4</div>
+              <div class="dial_btn" onclick="dial(this)">5</div>
+              <div class="dial_btn" onclick="dial(this)">6</div>
+            </div>
+            <div class="br">
+              <div class="dial_btn" onclick="dial(this)">7</div>
+              <div class="dial_btn" onclick="dial(this)">8</div>
+              <div class="dial_btn" onclick="dial(this)">9</div>
+            </div>
+            <div class="br">
+              <div class="dial_btn" onclick="dial(this)">*</div>
+              <div class="dial_btn" onclick="dial(this)">0</div>
+              <div class="dial_btn" onclick="dial(this)">#</div>
+            </div>
+            <div class="br">
+              <div id="call" class="call" onclick="call()">取得</div>
+            </div>
+            <div class="br">
+              <div id="display" class="display">取得番号</div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <h2>電卓</h2>
+          <input type="button" value="更新" onclick="window.location.reload()">
+          <div class="calc">
+            <div class="br">
+              <div id="calc_form" class="form">0</div>
+              <div class="dial_btn" onclick="equal()">＝</div>
+              <div class="sign text">符号</div>
+            </div>
+            <div class="br">
+              <div class="dial_btn" onclick="calc(this)">7</div>
+              <div class="dial_btn" onclick="calc(this)">8</div>
+              <div class="dial_btn" onclick="calc(this)">9</div>
+              <div class="dial_btn" onclick="edit(this)">/</div>
+              <div id="minus" class="dial_btn sign" onclick="minus()">-</div>
+            </div>
+            <div class="br">
+              <div class="dial_btn" onclick="calc(this)">4</div>
+              <div class="dial_btn" onclick="calc(this)">5</div>
+              <div class="dial_btn" onclick="calc(this)">6</div>
+              <div class="dial_btn" onclick="edit(this)">*</div>
+              <div id="plus" class="dial_btn sign" onclick="plus()">+</div>
+            </div>
+            <div class="br">
+              <div class="dial_btn" onclick="calc(this)">1</div>
+              <div class="dial_btn" onclick="calc(this)">2</div>
+              <div class="dial_btn" onclick="calc(this)">3</div>
+              <div class="dial_btn" onclick="edit(this)">-</div>
+            </div>
+            <div class="br">
+              <div class="dial_btn" onclick="zero(this);only_zero()">0</div>
+              <div class="dial_btn" onclick="zero(this)">00</div>
+              <div class="dial_btn" onclick="dot()">.</div>
+              <div class="dial_btn" onclick="edit(this)">+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="common/js/style.js"></script>
+    <script src="common/js/style2.js"></script>
+    <script src="common/js/style3.js"></script>
+  </body>
+</html>

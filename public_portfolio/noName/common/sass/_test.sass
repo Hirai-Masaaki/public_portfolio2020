@@ -1,0 +1,41 @@
+$transition: .5s ease
+$fontColor: rgba(255, 0, 0, 0.9)
+h1
+  font: 30px $fontColor
+  transition: $transition
+  &:hover
+    font: 35px darken($fontColor, 30%)
+    transition: $transition
+$i: 1
+$j: 30
+@while $i <= 5
+  $i: $i + 1
+  $j: $j - 4
+  @if $i == 3
+    h#{$i}
+      font: #{$j}px red
+  @else if $i == 5
+    h#{$i}
+      font: #{$j}px blue
+  @else
+    h#{$i}
+      font: #{$j}px black
+
+=button()
+  background: gray
+  border: thin solid lightgray
+  border-radius: 4px
+  box-shadow: 0 4px 0 0 darken(gray, 30%)
+button
+  +button()
+  &:hover
+    box-shadow: 0 2px 0 0 darken(gray, 30%)
+//または
+.button
+  background: gray
+  border: thin solid lightgray
+  border-radius: 4px
+  box-shadow: 0 4px 0 0 darken(gray, 30%)
+  &:hover
+    @extend .button
+    box-shadow: 0 2px 0 0 darken(gray, 30%)

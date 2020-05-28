@@ -1,0 +1,320 @@
+@charset "UTF-8";
+* {
+	box-sizing: border-box;
+}
+/* ページ全体背景・基本テキストカラー */
+body {
+  padding: 0;
+	margin: auto;
+	background: linear-gradient(110deg, rgba(0, 225, 255, 0.116), rgba(0, 225, 255, 0.116)), url(images/floor2.jpg) fixed;
+	background-size: cover;
+	color: black;
+}
+/* フォントを定義 */
+@font-face {
+  font-family: "fuga";
+  src: url("fonts/TA_fuga_fude_03_m.otf");
+  font-weight: bold;
+}
+/* ul設定 */
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+/* ページ左の動かない縦メニューバー */
+.sideMenuBar {
+	background-color: rgba(255, 255, 255, 0.705);
+	position: fixed;
+	height: 950px;
+	width: 250px;
+	text-align: center;
+	z-index: 999;
+}
+.sideMenuBar_logo {
+	font-size: 45px;
+	font-weight: 700;
+	line-height: 1;
+}
+.sideMenuBar_logo a {
+	display: block;
+	width: 100%;
+	padding: 30px 0;
+	color: rgb(0, 0, 0);
+	background: radial-gradient(closest-side,rgba(0, 0, 0, 0.144),rgba(255, 255, 255, 0));
+	-webkit-text-stroke: 2px white;
+	text-decoration-line: none;
+}
+.sideMenuBar_logo a:hover {
+	color: rgb(255, 174, 0);
+	background: radial-gradient(closest-side,rgba(255, 174, 0, 0.144),rgba(255, 255, 255, 0));
+	-webkit-text-stroke: 2px white;
+	transition: all 1.2s ease ;
+}
+.sideMenuBar_logo span {
+	line-height: 1.3;
+}
+.sideMenuBar_menu {
+	height: 100%;
+	font-weight: 600;
+	font-size: 20px;
+}
+.sideMenuBar_menu li:hover {
+	background: linear-gradient(rgba(255, 255, 255, 0.507), rgba(0, 0, 0, 0.507));
+	border-radius: 5px;
+}
+.sideMenuBar_menu li a {
+	display: block;
+	width: 100%;
+	padding: 10px 0;
+	margin: 0;
+	color: rgb(80, 80, 80);
+	text-decoration-line: none;
+}
+.sideMenuBar_menu li a:hover {
+	color: white;
+	font-weight: 900;
+}
+.sideMenuBar_arks {
+	position: relative;
+	margin-top:30px ;
+}
+.imacoco {
+	background: linear-gradient(rgba(255, 255, 255, 0.801), rgba(0, 0, 0, 0.801));
+	border-radius: 5px;
+	color: white;
+}
+.imacoco:hover {
+	background: linear-gradient(rgba(255, 255, 255, 0.507), rgba(0, 0, 0, 0.507));
+	border-radius: 5px;
+}
+.imacoco span {
+	color: white;
+}
+/* ページの本題 */
+.container {
+	height: 1379px;
+	width: 1189.58px;
+  margin-left: 250px;
+  display: grid;
+  grid-template-rows: 72px 472px 85px 85px 370px 85px 180px 30px;
+  grid-template-columns: 938.88px 250.7px;
+}
+.container_welcome {
+	grid-row: 1/2;
+	grid-column: 1/2;
+	background: linear-gradient( to right,  rgb(255, 187, 0) 25%, rgb(255, 115, 0) 75% );
+  -webkit-background-clip: text;
+  color: transparent;
+	font-size: 45px;
+	line-height: 90px;
+	letter-spacing: 5px;
+	margin: 0;
+	text-align: center;
+	-webkit-text-stroke: 2.5px white;
+}
+.container_welcome:hover {
+	letter-spacing: 8px;
+	transition: all 1.2s ease ;
+}
+
+/* 全ページ共通お知らせ */
+.container_news {
+	grid-row: 2/3;
+	grid-column: 2/3;
+	width: 230px;
+	height: 315px;
+	margin: 0;
+	border-radius: 10px;
+	border: medium solid  rgba(192, 192, 192, 0.76);
+	background-color: rgba(255, 255, 255, 0.685);
+}
+.container_news h3 {
+	margin: 8px 69.82px;
+	font-size: 20px;
+	font-weight: 500;
+}
+.container_news li {
+	font-size: 12px;
+	letter-spacing: -1px;
+	line-height: 20px;
+}
+/* トップページのstylesheet */
+.container_changeLog {
+	grid-row: 2/6;
+	grid-column: 2/3;
+	width: 230px;
+	height: 315px;
+	margin: auto 0;
+	border-radius: 10px;
+	border: medium solid  rgba(192, 192, 192, 0.76);
+	background-color: rgba(255, 255, 255, 0.685);
+}
+.container_changeLog h3 {
+	margin: 8px 69.82px;
+	font-size: 20px;
+	font-weight: 500;
+}
+.container_changeLog_menu p {
+	margin: 0;
+	font-size: 16px;
+	height: 24px;
+}
+.container_changeLog_menu ul {
+	height: 60px;
+}
+.container_changeLog_menu a {
+	float: left;
+	font-size: 14px;
+	padding: 4px;
+	color: cornflowerblue;
+}
+.container_changeLog_menu a:hover {
+	color: rgb(71, 119, 0);
+}
+.twitter-timeline {
+	grid-row: 5/7;
+	grid-column: 2/3;
+	width: 230px;
+	height: 539px;
+	color: rgba(255, 255, 255, 0);
+	transform: translateY(60px);
+}
+
+.container_groupPhoto {
+	grid-row: 2/3;
+	grid-column: 1/2;
+	width: 83%;
+	height: auto;
+	margin: auto;
+	padding: 0;
+	align-items: center;
+	border-radius: 10px;
+	background-color: gray;
+}
+.container_message {
+	grid-row: 3/4;
+	grid-column: 1/2;
+	font-size: 30px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	line-height: 35px;
+	padding-top: 5px;
+	margin: 0 80px;
+	text-align: center;
+	border-radius: 30px;
+	border: medium solid  rgb(255, 255, 255);
+	background-color: rgba(255, 255, 244, 0.623);
+}
+.container_masterMessage {
+	grid-row: 4/5;
+	grid-column: 1/2;
+	font-size: 40px;
+	letter-spacing: 2px;
+	line-height: 110px;
+	margin: 0 80px;
+	text-align: center;
+	-webkit-text-stroke: 1.5px white;
+}
+.container_masterPhoto {
+	grid-row: 5/6;
+	grid-column: 1/2;
+	width: 70%;
+	height: auto;
+	margin: auto;
+	padding: 0;
+	align-items: center;
+	border-radius: 10px;
+	background-color: gray;
+}
+.container_keyword {
+	grid-row: 6/7;
+	grid-column: 1/2;
+	font-size: 40px;
+	letter-spacing: 2px;
+	line-height: 110px;
+	margin: 0 80px;
+	text-align: center;
+	-webkit-text-stroke: 1.5px white;
+}
+.container_presentKeyword {
+	grid-row: 7/8;
+	grid-column: 1/2;
+	font-size: 18px;
+	padding-top: 10px;
+	margin: 0 60px;
+	height: 150px;
+	text-align: center;
+	border-radius: 10px;
+	border: medium solid  rgb(255, 255, 255);
+	background-color: rgba(255, 254, 200, 0.781);
+}
+.container_presentKeyword p {
+	margin: 0;
+}
+.container_presentKeyword span {
+	color: red;
+	font-size: 30px;
+	text-decoration-line: underline;
+}
+.footer_copyRight {
+	grid-row: 8/9;
+	grid-column: 1/2;
+	text-align: center;
+}
+
+/* page_top*/
+#page_top{
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+	opacity: 0.9;
+	z-index: 100;
+	right: 30px;
+}
+#page_top a{
+  position: relative;
+  display: block;
+  width: 90px;
+	height: 90px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f0a6';
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -60px;
+  bottom: 0;
+  right: 12px;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+#page_top a::after{
+  content: 'PAGE TOP';
+	font-size: 13px;
+	font-weight: 900;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+@media all and (-ms-high-contrast: none){
+.container_welcome {
+    background: none;
+    color: rgb(255, 94, 0);
+  }
+}

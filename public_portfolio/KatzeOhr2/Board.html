@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[猫]Katze Ohr[耳]_掲示板</title>
+		<link rel="stylesheet" href="subpage.css" />
+		<link rel="stylesheet" href="top_responsive.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    <script
+      src="https://kit.fontawesome.com/6576e2e08e.js"
+      crossorigin="anonymous"
+		></script>
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+		></script>
+  </head>
+  <body>
+		<div class="sideMenuBar">
+			<div class="sideMenuBar_logo"><a href="top.html" title="ネコチャン大好きPSO2チームサイト♪(メンバー募集中!(猫好きでなくとも大歓迎♪))"><span>[猫]</span><br />Katze<br />Ohr<br/><span>[耳]</span></a></div>
+			<div  class="sideMenuBar_menu">
+				<ul>
+					<li><a href="top.html" title="集合写真のページです♪">Home</a></li>
+					<li><a href="Introduction.html" title="[猫]Katze Ohr[耳]の愉快な仲間たち！">チーム紹介</a></li>
+					<li><a href="Event.html" title="不定期開催イベントもちらほら･･･">イベント</a></li>
+					<li><a href="ARecord.html" title="これまでのチームイベントなど記録しています♪">活動記録</a></li>
+					<li><a href="SInformation.html" title="わんふぉーおーるおーるふぉーわん！">攻略情報</a></li>
+					<li><a class="imacoco" href="Board.html" title="ブラウザ上でもおしゃべりできちゃいます♪"><span>掲示板</span></a></li>
+					<li><a href="Links.html" title="公式サイトにwikiなどにLink！">Links</a></li>
+				</ul>
+			<img class="sideMenuBar_arks" src="images/arks_iogo.png" width="110px" height="110px">
+			</div>
+		</div>
+		<section class="container">
+			<div class="container_news">
+				<h3>お知らせ</h3>
+				<ul>
+					<li>【猫】Katze Ohr【耳】絶賛活動中！(3/8)</li>
+					<li>＜3/1＞『しばらくログインしていません』が表示されているメンバーを対象に整理しました。</li>
+					<li>＜更新＞【猫】Katze Ohr【耳】の愉快な仲間達</li>
+					<li>＜3月＞自己紹会(介)と装備お披露目会の実施を予定してます！ヾ(*´∀｀*)ﾉ</li>
+					<li>＜体験入団＞superbiaさん、響さんが体験入団しました！仲良くしてね♪</li>
+				</ul>
+			</div>
+			<h1 id="container_titleB" class="container_title">掲示板</h1>
+			<div class="tabs">
+				<input id="memberB" type="radio" name="tab_item" checked>
+				<label class="tab_itemB" for="memberB">チムメン<br />雑談</label>
+				<input id="introB" type="radio" name="tab_item">
+				<label class="tab_itemB" for="introB">自己<br />紹介</label>
+				<input id="workB" type="radio" name="tab_item">
+				<label class="tab_itemB" for="workB">チーム<br />運営要望</label>
+				<input id="goodB" type="radio" name="tab_item">
+				<label class="tab_itemB" for="goodB">使い勝手のいい<br />掲示板</label>
+				<input id="enterB" type="radio" name="tab_item">
+				<label class="tab_itemB" for="enterB">チーム<br />入団受付</label>
+				<div class="tab_content" id="memberB_content">
+					雑談掲示板詳細
+				</div>
+				<div class="tab_content" id="introB_content">
+					チームメンバー詳細
+				</div>
+				<div class="tab_content" id="workB_content">
+					マスコットキャラクター詳細
+				</div>
+				<div class="tab_content" id="goodB_content">
+					チームルーム状況詳細
+				</div>
+				<div class="tab_content" id="enterB_content">
+					チーム規則詳細
+				</div>
+			</div>
+			<small class="footer_copyRight">
+				©2020 [猫]Katze Ohr[耳] all right reserved
+			</small>
+		</section>
+		<div id="page_top"><a href="#"></a></div>
+		<script>
+			jQuery(document).ready(function() {
+    		var pagetop = $('#page_top');   
+    		pagetop.hide();
+    		$(window).scroll(function () {
+        	if ($(this).scrollTop() > 100) {  //100pxスクロールしたら表示
+            pagetop.fadeIn();
+        	} else {
+            pagetop.fadeOut();
+        	}
+    		});
+    		pagetop.click(function () {
+        	$('body,html').animate({
+            scrollTop: 0
+        	}, 500); //0.5秒かけてトップへ移動
+        	return false;
+    		});
+			});
+		</script>
+  </body>
+</html>

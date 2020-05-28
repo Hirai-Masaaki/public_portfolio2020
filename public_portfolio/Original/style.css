@@ -1,0 +1,129 @@
+@charset "UTF-8";
+body {
+  padding: 0;
+  margin: 0;
+  background: #eaeaea;
+}
+
+@font-face {
+  font-family: "fuga";
+  src: url("fonts/TA_fuga_fude_03_m.otf");
+  font-weight: bold;
+}
+
+body {
+  background-color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+.page1 {
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: 200px;
+  display: grid;
+  grid-template-rows: 10vh 40vh 5vh 5vh 40vh;
+  grid-template-columns: 15vw 5vw 40vw 20vw 5vw 15vw;
+}
+
+.page1__header {
+  grid-row: 1/2;
+  grid-column: 2/6;
+  width: 100%;
+  background-color: #a12121;
+  color: #292929;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  z-index: 100;
+}
+
+.page1__header__logo {
+  float: left;
+  font-size: 1.5rem;
+  padding: 0 auto;
+}
+
+.page1__header__list li {
+  float: left;
+  font-size: 1rem;
+  padding: 0 auto;
+}
+
+.page1__JavaScript1 {
+  grid-row: 2/3;
+  grid-column: 3/5;
+  position: relative;
+  background-color: #292929;
+}
+
+.page1__titlePart {
+  grid-row: 4/5;
+  grid-column: 3/5;
+  position: relative;
+}
+
+.page1__titlePart__title {
+
+}
+
+.page1__titlePart__subtitle {
+
+}
+
+.twitter-timeline {
+  grid-row: 5/6;
+  grid-column: 4/5;
+}
+
+.page2 {
+
+}
+
+.page2__titlePart {
+
+}
+
+.page2__titlePart__title {
+
+}
+
+.page2__titlePart__subtitle {
+
+}
+
+.footer {
+  width: 100vw;
+  height: 150px;
+  background-color: #133f5f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ccc;
+  position: relative;
+}
+
+.footer__logo {
+  font-size: 1.8rem;
+  font-family: "fuga", serif;
+}
+
+.my-youtube {
+  color: red;
+}
+
+.my-twitter {
+  color: skyblue;
+}
+
+.footer__list {
+
+}
+
+.footer__copyRight {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 3rem;
+}

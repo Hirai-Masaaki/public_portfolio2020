@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[猫]Katze Ohr[耳]_top</title>
+    <link rel="stylesheet" href="top.css" />
+		<link rel="stylesheet" href="top_responsive.css" />
+		<link rel="JavaScript" href="jQuery.js" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    <script
+      src="https://kit.fontawesome.com/6576e2e08e.js"
+      crossorigin="anonymous"
+		></script>
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+		></script>
+  </head>
+  <body>
+		<div id="page_top"><a href="#"></a></div>
+    <header class="header">
+			<div class="tabs">
+				<input id="katzeOhr" type="radio" name="tab_item" value="1" onclick="radioDeselection(this, 1)">
+				<label class="tab_item" for="katzeOhr">チーム紹介</label>
+				<input id="member" type="radio" name="tab_item" value="2" onclick="radioDeselection(this, 2)">
+				<label class="tab_item" for="member">イベント</label>
+				<input id="mascot" type="radio" name="tab_item" value="3" onclick="radioDeselection(this, 3)">
+				<label class="tab_item" for="mascot">活動記録</label>
+				<input id="loom" type="radio" name="tab_item" value="4" onclick="radioDeselection(this, 4)">
+				<label class="tab_item" for="loom">攻略情報</label>
+				<input id="rule" type="radio" name="tab_item" value="5" onclick="radioDeselection(this, 5)">
+				<label class="tab_item" for="rule">掲示板</label>
+				<input id="recruiting" type="radio" name="tab_item" value="6" onclick="radioDeselection(this, 6)">
+				<label class="tab_item" for="recruiting">Links</label>
+				<div class="tab_content" id="katzeOhr_content">
+					<a href="">Katze Ohr とは？</a>
+					<a href="">メンバー</a>
+					<a href="">マスコット</a><br />
+					<a href="">チームルーム</a>
+					<a href="">チーム規則(重要！)</a>
+					<a href="">メンバー募集要項</a>
+				</div>
+				<div class="tab_content" id="member_content">
+					<a href="">自己紹会(介)</a>
+					<a href="">装備お披露目会</a>
+					<a href="">大乱闘にゃ〜くす</a><br />
+					<a href="">ミニ集会</a>
+					<a href="">チーム運営会議</a>
+				</div>
+				<div class="tab_content" id="mascot_content">
+					<a href="">思い出アルバム(SS集)</a>
+					<a href="">思い出アルバム(動画集)</a><br />
+					<a href="">チーム運営会議議事録</a>
+					<a href="">(='ェ'=)にゃぁ〜</a>
+				</div>
+				<div class="tab_content" id="loom_content">
+					<a href="">エキスパートへの道</a>
+					<a href="">レベル上げ</a>
+				</div>
+				<div class="tab_content" id="rule_content">
+					<a href="">チムメン雑談</a>
+					<a href="">自己紹介</a>
+					<a href="">チーム運営要望</a><br />
+					<a href="">自由</a>
+					<a href="">チーム入団受付</a>
+				</div>
+				<div class="tab_content" id="recruiting_content">
+					<a href="">Links</a>
+				</div>
+			</div>
+		</header>
+		<div class="subheader">
+			<h1 class="subheader_title">[猫]Katze Ohr[耳]</h1>
+			<h3 class="subheader_subtitle">ファンタシースターオンライン2のチーム[猫]Katze Ohr[耳]の活動紹介サイトです♪ship6:ケンにて活動中！</h3>
+		</div>
+		<div class="topmenu">
+			<ul>
+				<li>nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya nya </li>
+			</ul>
+		</div>
+    <section class="a">
+			<div class="a_sidemenu">
+				<div class="a_sidemenu_title">Menu</div>
+			</div>
+			<div class="a_container">
+				<div class="a_container_title">Top Page</div>
+			</div>
+    </section>
+    <footer class="footer">
+      <h2 class="footer_logo">[猫]Katze Ohr[耳]</h2>
+      <small class="footer_copyRight">
+        ©2020 [猫]Katze Ohr[耳] all right reserved
+      </small>
+		</footer>
+		<script>
+			jQuery(document).ready(function() {
+    		var pagetop = $('#page_top');   
+    		pagetop.hide();
+    		$(window).scroll(function () {
+        	if ($(this).scrollTop() > 100) {  //100pxスクロールしたら表示
+            pagetop.fadeIn();
+        	} else {
+            pagetop.fadeOut();
+        	}
+    		});
+    		pagetop.click(function () {
+        	$('body,html').animate({
+            scrollTop: 0
+        	}, 500); //0.5秒かけてトップへ移動
+        	return false;
+    		});
+			});
+		</script>
+		<script>
+			var remove = 0;
+
+			function radioDeselection(already, numeric) {
+				if(remove == numeric) {
+					already.checked = false;
+					remove = 0;
+				} else {
+					remove = numeric;
+				}
+			}
+		</script>
+  </body>
+</html>
